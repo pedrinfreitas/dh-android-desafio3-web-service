@@ -4,6 +4,128 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    android:background="@color/blue"
+    tools:context=".view.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/llPainelRed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/custom_panel_color_red"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="102dp"
+            android:background="@drawable/custom_panel_color_white"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputCustom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="54dp"
+                android:layout_marginEnd="12dp"
+                android:hint="Name"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/primary_variant"
+                app:hintTextColor="@color/primary_variant">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edRegisterName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/blue_light" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputCustom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="12dp"
+                android:hint="Email"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/primary_variant"
+                app:hintTextColor="@color/primary_variant">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edRegisterEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/blue_light" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputCustom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="12dp"
+                android:hint="Password"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/primary_variant"
+                app:hintTextColor="@color/primary_variant">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edRegisterPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="@color/blue_light" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btRegisterSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/custom_buttom_enabled"
+                android:text="SAVE"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/custom_circle"
+        app:layout_constraintBottom_toTopOf="@id/llPainelRed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/llPainelRed"
+
+        />
+
+    <ImageView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:background="@drawable/image_person"
+        app:layout_constraintBottom_toTopOf="@id/llPainelRed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/llPainelRed" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

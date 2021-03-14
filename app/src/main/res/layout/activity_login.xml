@@ -4,111 +4,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
-    android:background="@color/bg_plash">
+    android:background="@color/blue"
+    tools:context=".view.LoginActivity">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/custom_panel_color_red"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/shape_card"
-        android:layout_marginHorizontal="24dp"
-        android:orientation="vertical">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/welcome"
-            android:textColor="@color/white"
+            android:layout_marginTop="30dp"
+            android:background="@color/primary_variant"
+            android:text="Welcome to the Marvel HQ's"
             android:textAlignment="center"
-            android:layout_marginVertical="20dp"
-            android:textSize="24sp"
-            />
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_card_inside"
+            android:layout_gravity="center"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/custom_panel_color_white"
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tfLoginEmail"
                 android:layout_width="match_parent"
-                style="@style/TextInputCustom"
                 android:layout_height="wrap_content"
-                android:hint="@string/email"
-                android:layout_marginHorizontal="14dp"
-                android:layout_marginTop="45dp">
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="54dp"
+                android:layout_marginEnd="12dp"
+                style="@style/TextInputCustom"
+                android:hint="Email"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/primary_variant"
+                app:hintTextColor="@color/primary_variant">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edLoginEmail"
+                    android:id="@+id/edlogin_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:paddingStart="2dp"
-                    android:paddingBottom="2dp"
-                    />
+                    android:textColor="@color/blue_light" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tfLoginSenha"
                 android:layout_width="match_parent"
-                style="@style/TextInputCustom"
                 android:layout_height="wrap_content"
-                android:hint="@string/senha"
-                android:layout_marginHorizontal="14dp"
-                android:layout_marginTop="14dp">
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="12dp"
+                style="@style/TextInputCustom"
+                android:hint="Password"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/primary_variant"
+                app:hintTextColor="@color/primary_variant">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edLoginSenha"
+                    android:id="@+id/edPwd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:paddingStart="2dp"
-                    android:paddingBottom="2dp"
-                    />
+                    android:textColor="@color/blue_light" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.checkbox.MaterialCheckBox
-                android:id="@+id/cbLoginLembrar"
-                style="@style/CheckBoxInputCustom"
+            <CheckBox
+                android:id="@+id/cbRemenber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:buttonTint="@color/primary_variant"
+                android:text="Remember"
+                android:textColor="@color/black"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/remember"
-                android:layout_marginHorizontal="14dp"
-                android:layout_marginTop="14dp"
-                android:checked="false"/>
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="54dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/custom_buttom_enabled"
+                android:text="LOG IN"
+                android:textColor="@color/white" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnLoginLogin"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btCreateAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/log_in"
-                android:background="@color/red_deadpool"
-                android:layout_marginHorizontal="15dp"
-                android:layout_marginTop="45dp"
-                />
+                android:layout_margin="16dp"
+                android:background="@drawable/custom_button_nocolor"
+                android:text="Create account"
+                android:textColor="@color/black" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnLoginRegistrar"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/register"
-                android:textColor="@color/black_deadpool"
-                android:layout_marginBottom="10dp"
-                android:textAllCaps="false"
-                />
+        </LinearLayout>
 
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

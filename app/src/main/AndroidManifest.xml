@@ -3,7 +3,6 @@
     package="br.com.eupedro.desafio_webservice">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,16 +11,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Desafio_webservice">
-        <activity android:name=".HomeActivity"></activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".SplashScreenActivity">
+
+        <activity
+            android:name=".view.CoverDetalheActivity"
+            android:label=""
+            android:launchMode="singleTask"
+            android:parentActivityName=".view.DetalheComicsActivity"
+            android:theme="@style/Theme.CoverActionBar" />
+
+        <activity
+            android:name=".view.DetalheComicsActivity"
+            android:label=""
+            android:launchMode="singleTask"
+            android:parentActivityName=".view.HomeActivity"
+            android:theme="@style/Theme.DetalheActionBar" />
+
+        <activity android:name=".view.HomeActivity" />
+
+        <activity android:name=".view.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
+
+        <activity
+            android:name=".view.RegisterActivity"
+            android:label="Register"
+            android:parentActivityName=".view.LoginActivity"
+            android:theme="@style/Theme.RegisterActionBar" />
+
+        <activity android:name=".view.LoginActivity" />
+
     </application>
 
 </manifest>
