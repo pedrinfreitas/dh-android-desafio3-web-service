@@ -20,3 +20,6 @@ Espera-se que o aluno consiga executar as seguintes atividades seguindo o seguin
 ## Organização
 - Trabalhar com GitHub
 - Trabalhar com GIT
+
+demo:
+[video](https://https://github.com/pedrinfreitas/dh-android-desafio3-web-service/video_demo.mp4 "video")
