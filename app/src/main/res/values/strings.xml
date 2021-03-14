@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">desafio_webservice</string>
+    <string name="welcome">Welcome to the Marvel HQ\'s</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Password</string>
+    <string name="remember">Remember</string>
+    <string name="log_in">LOG IN</string>
+    <string name="register">Create account</string>
+    <string name="required">Ops... campo obrigatorio</string>
 </resources>
